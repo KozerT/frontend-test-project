@@ -5,13 +5,15 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  --background-base: #ffffff;
-  --background-light: #e6e6e6;
+  --background-base: #fefefe;
 
   --text-color: #000;
   --text-color-light: #7e7e7e;
 
   --border-color-base: #cbcaca;
+
+  --box-shadow-hover: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --box-shadow-active: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -28,6 +30,5 @@ body {
 
 body {
   color: var(--text-color);
-  background: linear-gradient(to bottom, transparent, var(--background-light)),
-    var(--background-base);
+  background: var(--background-base);
 }

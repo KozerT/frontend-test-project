@@ -1,0 +1,33 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  background-color: var(--background-base);
+  border: 1px solid var(--border-color-base);
+  min-width: 100%;
+  margin-top: 1.25rem;
+  padding: 0.8rem;
+  letter-spacing: 0.05rem;
+  border-radius: 625rem;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 14px;
+  text-align: center;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  margin-right: 0.6rem;
+}
+
+.button:hover {
+  box-shadow: var(--box-shadow-hover);
+}
+
+.button:active,
+.button:focus {
+  box-shadow: var(--box-shadow-active);
+}
