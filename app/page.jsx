@@ -8,7 +8,7 @@ export default function Home() {
     <main className={styles.main}>
       <h1 className={styles["text-main"]}>Sign in to PaidTabs</h1>
       <Link
-        href="https://stackoverflow.com/"
+        href="/google-flutter"
         passHref={true}
         className={styles["button-link"]}
       >

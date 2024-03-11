@@ -1,0 +1,76 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  min-width: 100%;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.password-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-input {
+  border: 1px solid var(--border-color-base);
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  cursor: pointer;
+  margin-top: 0.8rem;
+}
+
+.form-input[type="email"],
+.form-input[type="password"] {
+  color: var(--text-color-medium);
+  font-size: 16px;
+}
+
+.form-input[type="email"]:focus,
+.form-input[type="password"]:focus {
+  border: 1px solid var(--blue-icon-color);
+  outline: none;
+}
+
+.form-input:hover {
+  box-shadow: var(--box-shadow-hover);
+}
+
+.form-input:active,
+.form-input:focus {
+  box-shadow: var(--box-shadow-active);
+}
+.form-label {
+  font-weight: bolder;
+}
+
+.password-recovery-link {
+  cursor: pointer;
+  color: var(--text-color);
+
+  font-weight: normal;
+}
+
+.auth-button-link {
+  text-decoration: none;
+}
+
+.form-signup-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+  color: var(--text-color-medium);
+}
+
+.form-signup-link {
+  color: var(--text-color);
+}
+
+.password-recovery-link:hover,
+.form-signup-link:hover {
+  text-shadow: var(--border-color-base) 1px 0 8px;
+}

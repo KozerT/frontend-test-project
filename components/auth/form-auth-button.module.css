@@ -1,0 +1,25 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--background-base);
+  background-color: var(--text-color);
+  border: 1px solid var(--text-color);
+  min-width: 100%;
+  margin-top: 1.25rem;
+  padding: 0.8rem;
+  border-radius: 1.563rem;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+}
+
+.button:hover {
+  box-shadow: var(--box-shadow-dark-hover);
+}
+
+.button:active,
+.button:focus {
+  box-shadow: var(--box-shadow-dark-active);
+}

@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function Post() {
+export default function PostPage() {
   return <div>Post</div>;
 }
