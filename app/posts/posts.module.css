@@ -1,0 +1,14 @@
+.blog-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-blog-section);
+  height: 100dvh;
+}
+
+.blog-header {
+  justify-self: flex-start;
+  margin: 2rem auto;
+  width: 70dvw;
+  color: var(--text-color-medium);
+}

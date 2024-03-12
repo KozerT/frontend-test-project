@@ -16,8 +16,6 @@
   font-weight: bolder;
 }
 
-/* hr */
-
 .hr-lines {
   text-align: center;
   display: grid;
@@ -41,31 +39,8 @@
   margin-left: 12px;
 }
 
-/* form */
-
 .button-link {
   display: block;
   width: 100%;
   text-decoration: none;
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .content {
-    padding: 4rem;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
-  }
-}
-
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
 }
