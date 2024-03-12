@@ -13,21 +13,21 @@ export default function AuthForm() {
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
-    const savedEmail = localStorage.getItem("email");
+    const savedName = localStorage.getItem("name");
     const savedPassword = localStorage.getItem("password");
 
-    if (savedEmail && savedPassword) {
+    if (savedName && savedPassword) {
       setIsLoggedIn(true);
     }
   }, []);
 
-  const onFormSubmit = (event) => {
+  function onFormSubmit(event) {
     event.preventDefault();
     setErrors({});
 
     if (emailOrUsername.toLowerCase() === "liam" && password === "123123") {
       setIsLoggedIn(true);
-      localStorage.setItem("email", emailOrUsername);
+      localStorage.setItem("name", emailOrUsername);
       localStorage.setItem("password", password);
       router.push("/posts");
     } else {
@@ -43,7 +43,7 @@ export default function AuthForm() {
 
       setErrors(newErrors);
     }
-  };
+  }
 
   return (
     <>
