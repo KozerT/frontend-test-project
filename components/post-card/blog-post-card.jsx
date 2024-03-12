@@ -6,31 +6,31 @@ import CardImage from "@/public/img-unsplash.jpg";
 
 export default function BlogPostCard({ post }) {
   return (
-    <>
-      <article className={styles["blog-card"]}>
+    <Link
+      href={`/posts/${post.id}`}
+      passHref
+      className={styles["blog-card-link-main"]}
+    >
+      <div className={styles["blog-card"]}>
         <figure className={styles["blog-card-img-container"]}>
           <Image
             src={CardImage}
-            width={500}
-            height={500}
+            width={0}
+            height={0}
+            priority={true}
             alt="Picture of the happy people "
             className={styles["blog-card-image"]}
           ></Image>
         </figure>
         <div className={styles["blog-card-content"]}>
-          <h3 className={styles["blog-card-title"]}>Title</h3>
+          <h3 className={styles["blog-card-title"]}>{post.title}</h3>
           <p className={styles["blog-card-date"]}>Posted Date</p>
           <p className={styles["blog-card-excerpt"]}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            explicabo aperiam praesentium non, itaque aut ex ipsa eius similique
-            sunt corrupti odit eaque, eum laborum? Molestias illum repudiandae
-            quibusdam laudantium.
+            {post.body.slice(0, 100)}...
           </p>
-          <Link href={"/posts/{id}"} className={styles["redirect-link"]}>
-            Read More
-          </Link>
+          <span className={styles["redirect-link"]}>Read More</span>
         </div>
-      </article>
-    </>
+      </div>
+    </Link>
   );
 }

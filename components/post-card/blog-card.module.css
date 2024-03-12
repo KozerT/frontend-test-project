@@ -1,3 +1,8 @@
+.blog-card-link-main {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
 .blog-card {
   width: 70vw;
   background-color: var(--background-base);
@@ -8,18 +13,17 @@
   display: flex;
   flex-direction: column;
   height: 70dvh;
-  cursor: pointer;
 }
 
 .blog-card-img-container {
   overflow: hidden;
-  cursor: pointer;
-  height: 70%;
 }
 
 .blog-card-image {
+  max-height: 20rem;
   width: 100%;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .blog-card-content {
@@ -31,17 +35,13 @@
   font-weight: 600;
 }
 
-.blog-card-date {
-  color: var(--text-color-light);
+.blog-card-date,
+.blog-card-excerpt {
   margin: 0.4rem auto;
 }
 
-.blog-card-excerpt {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  margin: 0.4rem auto;
+.blog-card-date {
+  color: var(--text-color-light);
 }
 
 .redirect-link {

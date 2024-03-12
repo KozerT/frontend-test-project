@@ -76,6 +76,7 @@ export default function AuthForm() {
             <Link
               href="/password-recovery"
               className={styles["password-recovery-link"]}
+              passHref={true}
             >
               Forgot?
             </Link>
@@ -100,7 +101,11 @@ export default function AuthForm() {
         <div className={styles["form-signup-container"]}>
           <p>Don&apos;t have an account?</p>
           <span>
-            <Link href="/signup" className={styles["form-signup-link"]}>
+            <Link
+              href="/signup"
+              className={styles["form-signup-link"]}
+              passHref={true}
+            >
               Sign up
             </Link>
           </span>

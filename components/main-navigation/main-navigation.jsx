@@ -11,7 +11,7 @@ function MainNavigation() {
         <ul>
           <ListItem />
           <li>
-            <Link href={"/"}>
+            <Link href={"/"} passHref={true}>
               <MainNavigationButton />
             </Link>
           </li>
