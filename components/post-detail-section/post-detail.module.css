@@ -1,0 +1,43 @@
+.post-container {
+  width: 70vw;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.post-icon-link {
+  margin-top: 2rem;
+  width: 2rem;
+}
+
+.post-icon {
+  cursor: pointer;
+}
+
+.post-title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.post-date {
+  color: var(--text-color-light);
+  width: 100%;
+}
+
+.post-content {
+  margin-bottom: 1.5rem;
+}
+
+.post-container-img {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.post-image {
+  max-height: 20rem;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}

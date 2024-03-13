@@ -23,7 +23,7 @@ export default function BlogPostCard({ post }) {
           ></Image>
         </figure>
         <div className={styles["blog-card-content"]}>
-          <h3 className={styles["blog-card-title"]}>{post.title}</h3>
+          <h1 className={styles["blog-card-title"]}>{post.title}</h1>
           <p className={styles["blog-card-date"]}>Posted Date</p>
           <p className={styles["blog-card-excerpt"]}>
             {post.body.slice(0, 100)}...

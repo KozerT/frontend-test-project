@@ -1,12 +1,12 @@
 import BlogPostCard from "@/components/post-card/blog-post-card";
 import styles from "./posts.module.css";
-import LatestPost from "./latest-post";
+import LatestPost from "./fetched-post";
 
-export default function PostsPage({ latestPost }) {
+export default function PostsPage() {
   return (
     <div className={styles["blog-card-container"]}>
-      <h1 className={styles["blog-header"]}>Latest Post</h1>
-      <LatestPost />
+      <title className={styles["blog-header"]}>Latest Post</title>
+      <LatestPost postComponent={BlogPostCard} />
     </div>
   );
 }

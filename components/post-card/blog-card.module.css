@@ -1,6 +1,7 @@
 .blog-card-link-main {
   text-decoration: none;
   color: var(--text-color);
+  margin-top: 4rem;
 }
 
 .blog-card {
