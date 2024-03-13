@@ -1,6 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Title
+
+FRONTEND-TEST-PROJECT
+
+## Project Description
+
+This project is a [Next.js](https://nextjs.org/) application bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+
+### Installation
+
+To run this project locally, follow these steps:
+
+1. Clone this repository.
+2. Navigate to the project directory.
+3. Install dependencies using your preferred package manager:
+
+### Development
 
 First, run the development server:
 
@@ -34,3 +50,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Total Time Spent
+
+Total time spent on this project: 25 hours (includes coding, debugging, and research).
