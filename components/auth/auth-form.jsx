@@ -11,6 +11,7 @@ export default function AuthForm() {
   const [password, setPassword] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const savedName = localStorage.getItem("name");
@@ -21,27 +22,37 @@ export default function AuthForm() {
     }
   }, []);
 
-  function onFormSubmit(event) {
+  async function onFormSubmit(event) {
     event.preventDefault();
     setErrors({});
 
-    if (emailOrUsername.toLowerCase() === "liam" && password === "123123") {
-      setIsLoggedIn(true);
-      localStorage.setItem("name", emailOrUsername);
-      localStorage.setItem("password", password);
-      router.push("/posts");
-    } else {
-      const newErrors = {};
+    try {
+      setLoading(true);
+      await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      if (password !== "123123") {
-        newErrors.password = "Invalid password";
+      if (emailOrUsername.toLowerCase() === "liam" && password === "123123") {
+        setIsLoggedIn(true);
+        localStorage.setItem("name", emailOrUsername);
+        localStorage.setItem("password", password);
+        router.push("/posts");
+      } else {
+        const newErrors = {};
+
+        if (password !== "123123") {
+          newErrors.password = "Invalid password";
+        }
+
+        if (!(emailOrUsername.toLowerCase() === "liam")) {
+          newErrors.emailOrUsername = "Invalid username or email";
+        }
+
+        setErrors(newErrors);
+        setLoading(false);
       }
-
-      if (!(emailOrUsername.toLowerCase() === "liam")) {
-        newErrors.emailOrUsername = "Invalid username or email";
-      }
-
-      setErrors(newErrors);
+    } catch (error) {
+      console.error("Error:", error);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -96,7 +107,11 @@ export default function AuthForm() {
           {errors.password && <p className={styles.error}>{errors.password}</p>}
         </div>
         <div className={styles["auth-button-link"]}>
-          <FormAuthButton disabled={!isLoggedIn} />
+          <FormAuthButton
+            // disabled={!isLoggedIn}
+            loading={loading}
+            onClick={onFormSubmit}
+          />
         </div>
         <div className={styles["form-signup-container"]}>
           <p>Don&apos;t have an account?</p>
