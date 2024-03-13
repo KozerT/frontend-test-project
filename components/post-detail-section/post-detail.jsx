@@ -16,6 +16,8 @@ export default function postDetail({ post }) {
         <Image
           src={iconArrow}
           alt="arrow left circle"
+          width={0}
+          height={0}
           className={styles["post-icon"]}
         />
       </Link>
